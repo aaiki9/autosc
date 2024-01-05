@@ -8,9 +8,9 @@ PERMISSION () {
     echo "Checking VPS"
     IZIN=$(curl -sS https://raw.githubusercontent.com/aaiki9/autosc/main/permission/ip | awk '{print $3}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
-    echo -e green "Permission Accepted..."
+    echo -e "${NC}${green}Permission Accepted...${NC}"
     else
-    echo -e red "Permission Denied"
+    echo -e "${NC}${red}Permission Denied!${NC}"
     fi
 }
 

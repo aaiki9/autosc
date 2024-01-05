@@ -11,6 +11,7 @@ PERMISSION () {
     echo -e "${NC}${green}Permission Accepted...${NC}"
     else
     echo -e "${NC}${red}Permission Denied${NC}"
+    fi
 }
 
 clear

@@ -5,7 +5,7 @@ biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 
 PERMISSION () {
     MYIP=$(wget -qO ipinfo.io/io)
-    IZIN=$(wget -qO https://raw.githubusercontent.com/aaiki9/autosc/main/permission/ip | awk '{print $3}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/aaiki9/autosc/main/permission/ip | awk '{print $3}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
    # Bloman
     else

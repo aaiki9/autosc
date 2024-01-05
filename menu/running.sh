@@ -21,7 +21,7 @@ dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Dat
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
 
-MYIP=$(curl -sS ipinfo.io/ip)
+MYIP=$(wget -qO ipinfo.io/ip)
 
 red='\e[1;31m'
 green='\e[1;32m'

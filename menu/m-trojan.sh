@@ -1,7 +1,7 @@
 #!/bin/bash
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
-IZIN=$(wget -qO https://raw.githubusercontent.com/aaiki9/autosc/main/permission/ip | awk '{print $3}' | grep $MYIP)
+IZIN=$(curl -sS https://raw.githubusercontent.com/aaiki9/autosc/main/permission/ip | awk '{print $3}' | grep $MYIP)
 if [ $MYIP = $IZIN ]; then
 echo -e "\e[32mPermission Accepted...\e[0m"
 #CEKEXPIRED
